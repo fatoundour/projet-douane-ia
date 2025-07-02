@@ -78,13 +78,13 @@ Il repose sur une architecture **modulaire et évolutive**, permettant d’ajout
 projet\_douane\_ia/  
 ├── tracking\_navires/  
 ├── scanner\_ai/  
-├── ciblage\_ai/
-├── entrepot\_ai/
-├── backend\_api/
-├── dashboard/
-├── common\_utils/
-├── requirements.txt
-└── README.md
+├── ciblage\_ai/  
+├── entrepot\_ai/  
+├── backend\_api/  
+├── dashboard/  
+├── common\_utils/  
+├── requirements.txt  
+└── README.md  
 
 ````
 
