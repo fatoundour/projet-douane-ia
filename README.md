@@ -75,9 +75,9 @@ Il repose sur une architecture **modulaire et évolutive**, permettant d’ajout
 
 ```
 
-projet\_douane\_ia/
-├── tracking\_navires/
-├── scanner\_ai/
+projet\_douane\_ia/  
+├── tracking\_navires/  
+├── scanner\_ai/  
 ├── ciblage\_ai/
 ├── entrepot\_ai/
 ├── backend\_api/
@@ -184,6 +184,3 @@ Email : [fatoumatandour376@gmail.com](fatoumatandour376@gmail.com)
 GitHub : [github.com/fatoumata-ndour](https://github.com/fatoundour)
 
 ````
-
----
-
