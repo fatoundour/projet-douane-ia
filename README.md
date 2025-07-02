@@ -136,8 +136,6 @@ pip install -r requirements.txt
 ```bash
 cd tracking_navires/notebooks/
 jupyter notebook
-+
-VS Code
 ```
 
 ---

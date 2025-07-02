@@ -3,32 +3,55 @@ numpy>=1.26
 pandas>=2.2
 scikit-learn>=1.4
 
-# Visualisation
+# Visualisation et analyse
 matplotlib>=3.8
 seaborn>=0.13
+plotly>=5.20
 
-# Cartographie et tracking
+# Cartographie et géodonnées (Tracking navires)
 folium>=0.15
 geopandas>=0.14
 shapely>=2.0
+geopy>=2.4
+pyproj>=3.6
 
-# IA et Deep Learning
+# Machine Learning (Ciblage IA)
 xgboost>=2.0
+lightgbm>=4.3
+
+# Deep Learning (Scanner IA)
 tensorflow>=2.15
 opencv-python>=4.9
+keras>=2.15
 
-# Backend API
+# API backend
 fastapi>=0.110
 uvicorn[standard]>=0.27
 python-multipart>=0.0.9
+pydantic>=2.7
 
-# Base de données
+# Base de données (Entrepôts IA, logs)
 psycopg2-binary>=2.9
+sqlalchemy>=2.0
+alembic>=1.13
 
-# Notebooks
-notebook>=7.1
+# Notebooks et environnement interactif
 jupyterlab>=4.1
+notebook>=7.1
 ipykernel>=6.29
 
-# Environnement
+# Outils utilitaires
 python-dotenv>=1.0
+joblib>=1.4
+tqdm>=4.66
+requests>=2.32
+
+# Formatage & vérification (optionnel mais recommandé)
+black>=24.4
+flake8>=7.0
+isort>=5.13
+pre-commit>=3.6
+
+# Test et typage
+pytest>=8.1
+mypy>=1.10
