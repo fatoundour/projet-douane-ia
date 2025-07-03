@@ -1,17 +1,25 @@
-# projet-douane-ia
-Système IA modulaire pour la Douane sénégalaise, à commencer par le tracking des navires.
+Merci pour ce README très bien structuré ! 🎯
+Voici ta version **améliorée et complète** avec :
+
+1. ✅ **Ajout du schéma fonctionnel ASCII** (juste après la section « Modules IA du projet »)
+2. ✅ **Correction de la structure du projet** (dans un bloc de code Markdown correct)
+3. ✅ **Cohérence visuelle et indentation propre**
 
 ---
 
-```markdown
-# Projet IA Douanière – Système Modulaire Intelligent
+Voici la version finale, prête à coller dans ton `README.md` :
+
+---
+
+````markdown
+# 🎯 Projet IA – Système Modulaire pour la Douane Sénégalaise
 
 Ce projet vise à appuyer la transformation digitale de la Douane sénégalaise par l'intégration progressive de modules d’intelligence artificielle.  
 Il repose sur une architecture **modulaire et évolutive**, permettant d’ajouter, chaque mois, un module IA indépendant sans perturber le système existant.
 
 ---
 
-## Objectifs
+## 🧠 Objectifs
 
 - Optimiser la gestion des flux portuaires
 - Améliorer la précision des contrôles douaniers
@@ -20,91 +28,129 @@ Il repose sur une architecture **modulaire et évolutive**, permettant d’ajout
 
 ---
 
-## Modules IA du projet
+## 📦 Modules IA du projet
 
 ### 1. Tracking intelligent des navires
 - Prédiction des dates d’arrivée réelles
 - Suivi en temps réel des itinéraires AIS
 - Détection des itinéraires suspects
-- Visualisation sur carte interactive
-
-**Outils :**
-- Python, Pandas, Scikit-learn  
-- Folium, Geopandas, Jupyter  
-- FastAPI
-
----
+- Visualisation sur carte interactive  
+**Outils :** Python, Pandas, Scikit-learn, Folium, Geopandas, Jupyter, FastAPI
 
 ### 2. Analyse automatique des images scanner
 - Analyse des scans de conteneurs
 - Détection de contrebande, anomalies, objets dissimulés
-- Alerte sur les volumes ou densités suspects
-
-**Outils :**
-- Python, OpenCV, TensorFlow/Keras  
-- FastAPI, modèle CNN personnalisé  
-- Visualisation des anomalies
-
----
+- Alerte sur les volumes ou densités suspects  
+**Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
 
 ### 3. Ciblage intelligent des marchandises
 - Analyse croisée des déclarations, historiques, valeurs
 - Attribution de scores de risque
-- Détection de fausses déclarations, sous-évaluations, conteneurs fictifs
-
-**Outils :**
-- Python, Scikit-learn, XGBoost  
-- PostgreSQL pour les données  
-- API de scoring
-
----
+- Détection de fausses déclarations, sous-évaluations, conteneurs fictifs  
+**Outils :** Python, Scikit-learn, XGBoost, PostgreSQL, API de scoring
 
 ### 4. Gestion intelligente des entrepôts
 - Suivi des conteneurs après débarquement
 - Détection des mouvements non autorisés, vols, erreurs
-- Optimisation de l’occupation et de la traçabilité
-
-**Outils :**
-- Python, capteurs simulés ou connectés  
-- Map interactive + interface gestion  
-- PostgreSQL + système d’alertes
+- Optimisation de l’occupation et de la traçabilité  
+**Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
 
 ---
 
-## Structure du projet
+## 🗺️ Schéma fonctionnel global
 
-```
-
-projet\_douane\_ia/  
-├── tracking\_navires/  
-├── scanner\_ai/  
-├── ciblage\_ai/  
-├── entrepot\_ai/  
-├── backend\_api/  
-├── dashboard/  
-├── common\_utils/  
-├── requirements.txt  
-└── README.md  
-
+```txt
+                      +----------------------+
+                      |      Navires         |
+                      |  (Données AIS brutes)|
+                      +----------+-----------+
+                                 |
+                                 v
+               +-------------------------------+
+               |  Module 1 : Tracking Navires   |
+               |  → Nettoyage & prédiction ETA  |
+               +-------------------------------+
+                                 |
+                                 v
+               +-------------------------------+
+               |  Croisement avec déclarations |
+               |  (valeurs, quantités, docs)   |
+               +-------------------------------+
+                                 |
+                                 v
+               +-------------------------------+
+               |  Module 3 : Ciblage IA        |
+               |  → Score de risque par conteneur |
+               +-------------------------------+
+                                 |
+                                 v
+               +-------------------------------+
+               |  Module 2 : Scanner IA        |
+               |  → Analyse automatique image  |
+               |  → Détection de fraude        |
+               +-------------------------------+
+                                 |
+                                 v
+               +-------------------------------+
+               |  Module 4 : Entrepôt IA       |
+               |  → Traçabilité, alertes, vols |
+               +-------------------------------+
+                                 |
+                                 v
+               +-------------------------------+
+               |     API FastAPI Centrale      |
+               |     (communication modules)   |
+               +-------------------------------+
+                                 |
+                                 v
+               +-------------------------------+
+               |    Dashboard ou Interface     |
+               |  (résultats, alertes, ETA...) |
+               +-------------------------------+
 ````
 
 ---
 
-## Installation (Linux ou Windows)
+## 📁 Structure du projet
 
-### Pré-requis
+```txt
+projet_douane_ia/
+├── tracking_navires/           # Module 1 : tracking navires
+│   ├── data/
+│   ├── notebooks/
+│   ├── scripts/
+│   └── models/
+│
+├── scanner_ai/                 # Module 2 : scanner conteneurs
+├── ciblage_ai/                 # Module 3 : ciblage déclarations
+├── entrepot_ai/                # Module 4 : entrepôt intelligent
+│
+├── backend_api/                # API FastAPI centralisée
+├── dashboard/                  # Interface (à venir)
+├── common_utils/               # Fonctions partagées
+├── .env                        # Variables d’environnement
+├── requirements.txt            # Librairies principales
+├── requirements-dev.txt        # Outils développeur (black, flake8, etc.)
+└── README.md
+```
 
-- Python 3.10+
-- pip
-- Git
-- VS Code ou éditeur de code
+---
+
+## 🛠️ Installation (Linux ou Windows)
+
+### Prérequis
+
+* Python 3.10+
+* pip
+* Git
+* VS Code (ou tout éditeur)
 
 ### Cloner le projet
 
 ```bash
 git clone https://github.com/fatoumata-ndour/projet-douane-ia.git
 cd projet-douane-ia
-````
+```
 
 ### Créer un environnement virtuel
 
@@ -129,9 +175,15 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+### Outils développeur (optionnel)
+
+```bash
+pip install -r requirements-dev.txt
+```
+
 ---
 
-## Lancer un module (exemple : tracking des navires)
+## 🚀 Exemple de lancement : Tracking des navires
 
 ```bash
 cd tracking_navires/notebooks/
@@ -140,16 +192,16 @@ jupyter notebook
 
 ---
 
-## Déploiement (phase production)
+## 🧩 Déploiement (production)
 
-* Chaque module est déployé comme un **microservice indépendant**
-* API centralisée pour exposer les résultats (backend\_api/)
-* Tableau de bord interactif pour les agents (dashboard/)
-* Intégration progressive avec PostgreSQL et Docker (prévu)
+* Chaque module sera déployé comme **microservice indépendant**
+* API centralisée : `backend_api/`
+* Dashboard interactif (en cours)
+* Intégration PostgreSQL et Docker prévue
 
 ---
 
-## Technologies principales
+## 🔧 Technologies principales
 
 * Python, Jupyter, Pandas, Scikit-learn, TensorFlow
 * Folium, FastAPI, PostgreSQL, Docker
@@ -157,7 +209,7 @@ jupyter notebook
 
 ---
 
-## Modules IA à venir
+## 📅 Modules IA – Suivi d’avancement
 
 | Module      | Statut           | Livraison prévue |
 | ----------- | ---------------- | ---------------- |
@@ -168,7 +220,7 @@ jupyter notebook
 
 ---
 
-## Licence
+## 📜 Licence
 
 Projet sous licence MIT – libre d’utilisation, modification et diffusion.
 
