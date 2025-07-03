@@ -115,23 +115,40 @@ Il repose sur une architecture **modulaire et évolutive**, permettant d’ajout
 
 ```txt
 projet_douane_ia/
-├── tracking_navires/           # Module 1 : tracking navires
-│   ├── data/
+├── tracking_navires/
+│   ├── data/                  # Données AIS brutes / nettoyées
+│   ├── notebooks/             # Jupyter notebooks pour tests
+│   ├── scripts/               # Prétraitement, prédiction ETA
+│   └── models/                # Modèle ML entraîné (.joblib, .pkl)
+│
+├── scanner_ai/
+│   ├── images/                # Scans conteneurs
+│   ├── notebooks/             # Exploration IA vision
+│   ├── scripts/               # Analyse, prédiction image
+│   └── models/                # Réseaux neuronaux entraînés
+│
+├── ciblage_ai/
+│   ├── data/                  # Déclarations, historiques
+│   ├── scripts/               # Scoring IA, règles de fraude
+│   └── models/                # Modèles XGBoost, LightGBM
+│
+├── entrepot_ai/
 │   ├── notebooks/
-│   ├── scripts/
-│   └── models/
+│   ├── scripts/               # Gestion flux logistique
+│   └── sensors/               # (simulé) Données capteurs
 │
-├── scanner_ai/                 # Module 2 : scanner conteneurs
-├── ciblage_ai/                 # Module 3 : ciblage déclarations
-├── entrepot_ai/                # Module 4 : entrepôt intelligent
+├── backend_api/
+│   ├── main.py                # Point d'entrée FastAPI
+│   ├── routes/                # Endpoints REST
+│   └── utils/                 # Chargement modèles, config
 │
-├── backend_api/                # API FastAPI centralisée
-├── dashboard/                  # Interface (à venir)
-├── common_utils/               # Fonctions partagées
-├── .env                        # Variables d’environnement
-├── requirements.txt            # Librairies principales
-├── requirements-dev.txt        # Outils développeur (black, flake8, etc.)
+├── dashboard/                 # (futur) Interface de suivi
+├── common_utils/              # Fonctions partagées (config, I/O, etc.)
+├── .env                       # Variables d’environnement (non versionnées)
+├── requirements.txt           # Dépendances principales
+├── requirements-dev.txt       # Outils dev : black, flake8, pytest...
 └── README.md
+
 ```
 
 ---
