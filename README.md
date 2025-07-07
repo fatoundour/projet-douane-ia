@@ -1,63 +1,53 @@
-Merci pour ce README très bien structuré ! 🎯
-Voici ta version **améliorée et complète** avec :
+# 🌟 Projet IA – Système Modulaire pour la Douane Sénégalaise
 
-1. ✅ **Ajout du schéma fonctionnel ASCII** (juste après la section « Modules IA du projet »)
-2. ✅ **Correction de la structure du projet** (dans un bloc de code Markdown correct)
-3. ✅ **Cohérence visuelle et indentation propre**
-
----
-
-Voici la version finale, prête à coller dans ton `README.md` :
-
----
-
-````markdown
-# 🎯 Projet IA – Système Modulaire pour la Douane Sénégalaise
-
-Ce projet vise à appuyer la transformation digitale de la Douane sénégalaise par l'intégration progressive de modules d’intelligence artificielle.  
+Ce projet vise à appuyer la transformation digitale de la Douane sénégalaise par l'intégration progressive de modules d’intelligence artificielle.
 Il repose sur une architecture **modulaire et évolutive**, permettant d’ajouter, chaque mois, un module IA indépendant sans perturber le système existant.
 
 ---
 
-## 🧠 Objectifs
+## 🧐 Objectifs
 
-- Optimiser la gestion des flux portuaires
-- Améliorer la précision des contrôles douaniers
-- Réduire les fraudes, les pertes et les congestions
-- Fournir une base IA fiable pour la modernisation progressive de la Douane
+* Optimiser la gestion des flux portuaires
+* Améliorer la précision des contrôles douaniers
+* Réduire les fraudes, les pertes et les congestions
+* Fournir une base IA fiable pour la modernisation progressive de la Douane
 
 ---
 
 ## 📦 Modules IA du projet
 
 ### 1. Tracking intelligent des navires
-- Prédiction des dates d’arrivée réelles
-- Suivi en temps réel des itinéraires AIS
-- Détection des itinéraires suspects
-- Visualisation sur carte interactive  
-**Outils :** Python, Pandas, Scikit-learn, Folium, Geopandas, Jupyter, FastAPI
+
+* Prédiction des dates d’arrivée réelles
+* Suivi en temps réel des itinéraires AIS
+* Détection des itinéraires suspects
+* Visualisation sur carte interactive
+  **Outils :** Python, Pandas, Scikit-learn, Folium, Geopandas, Jupyter, FastAPI
 
 ### 2. Analyse automatique des images scanner
-- Analyse des scans de conteneurs
-- Détection de contrebande, anomalies, objets dissimulés
-- Alerte sur les volumes ou densités suspects  
-**Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
+
+* Analyse des scans de conteneurs
+* Détection de contrebande, anomalies, objets dissimulés
+* Alerte sur les volumes ou densités suspects
+  **Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
 
 ### 3. Ciblage intelligent des marchandises
-- Analyse croisée des déclarations, historiques, valeurs
-- Attribution de scores de risque
-- Détection de fausses déclarations, sous-évaluations, conteneurs fictifs  
-**Outils :** Python, Scikit-learn, XGBoost, PostgreSQL, API de scoring
+
+* Analyse croisée des déclarations, historiques, valeurs
+* Attribution de scores de risque
+* Détection de fausses déclarations, sous-évaluations, conteneurs fictifs
+  **Outils :** Python, Scikit-learn, XGBoost, PostgreSQL, API de scoring
 
 ### 4. Gestion intelligente des entrepôts
-- Suivi des conteneurs après débarquement
-- Détection des mouvements non autorisés, vols, erreurs
-- Optimisation de l’occupation et de la traçabilité  
-**Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
+
+* Suivi des conteneurs après débarquement
+* Détection des mouvements non autorisés, vols, erreurs
+* Optimisation de l’occupation et de la traçabilité
+  **Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
 
 ---
 
-## 🗺️ Schéma fonctionnel global
+## 🗌 Schéma fonctionnel global
 
 ```txt
                       +----------------------+
@@ -107,53 +97,52 @@ Il repose sur une architecture **modulaire et évolutive**, permettant d’ajout
                |    Dashboard ou Interface     |
                |  (résultats, alertes, ETA...) |
                +-------------------------------+
-````
+```
 
 ---
 
 ## 📁 Structure du projet
 
-```txt
+```
 projet_douane_ia/
 ├── tracking_navires/
-│   ├── data/                  # Données AIS brutes / nettoyées
-│   ├── notebooks/             # Jupyter notebooks pour tests
-│   ├── scripts/               # Prétraitement, prédiction ETA
-│   └── models/                # Modèle ML entraîné (.joblib, .pkl)
+│   ├── data/
+│   ├── notebooks/
+│   ├── scripts/
+│   └── models/
 │
 ├── scanner_ai/
-│   ├── images/                # Scans conteneurs
-│   ├── notebooks/             # Exploration IA vision
-│   ├── scripts/               # Analyse, prédiction image
-│   └── models/                # Réseaux neuronaux entraînés
+│   ├── images/
+│   ├── notebooks/
+│   ├── scripts/
+│   └── models/
 │
 ├── ciblage_ai/
-│   ├── data/                  # Déclarations, historiques
-│   ├── scripts/               # Scoring IA, règles de fraude
-│   └── models/                # Modèles XGBoost, LightGBM
+│   ├── data/
+│   ├── scripts/
+│   └── models/
 │
 ├── entrepot_ai/
 │   ├── notebooks/
-│   ├── scripts/               # Gestion flux logistique
-│   └── sensors/               # (simulé) Données capteurs
+│   ├── scripts/
+│   └── sensors/
 │
 ├── backend_api/
-│   ├── main.py                # Point d'entrée FastAPI
-│   ├── routes/                # Endpoints REST
-│   └── utils/                 # Chargement modèles, config
+│   ├── main.py
+│   ├── routes/
+│   └── utils/
 │
-├── dashboard/                 # (futur) Interface de suivi
-├── common_utils/              # Fonctions partagées (config, I/O, etc.)
-├── .env                       # Variables d’environnement (non versionnées)
-├── requirements.txt           # Dépendances principales
-├── requirements-dev.txt       # Outils dev : black, flake8, pytest...
+├── dashboard/
+├── common_utils/
+├── .env
+├── requirements.txt
+├── requirements-dev.txt
 └── README.md
-
 ```
 
 ---
 
-## 🛠️ Installation (Linux ou Windows)
+## 🚧 Installation (Linux ou Windows)
 
 ### Prérequis
 
@@ -209,16 +198,16 @@ jupyter notebook
 
 ---
 
-## 🧩 Déploiement (production)
+## 🧰 Déploiement (production)
 
-* Chaque module sera déployé comme **microservice indépendant**
-* API centralisée : `backend_api/`
+* Chaque module sera déployé comme microservice indépendant
+* API centralisée : backend\_api/
 * Dashboard interactif (en cours)
 * Intégration PostgreSQL et Docker prévue
 
 ---
 
-## 🔧 Technologies principales
+## 🛠️ Technologies principales
 
 * Python, Jupyter, Pandas, Scikit-learn, TensorFlow
 * Folium, FastAPI, PostgreSQL, Docker
@@ -226,7 +215,7 @@ jupyter notebook
 
 ---
 
-## 📅 Modules IA – Suivi d’avancement
+## 🗓️ Modules IA – Suivi d’avancement
 
 | Module      | Statut           | Livraison prévue |
 | ----------- | ---------------- | ---------------- |
@@ -243,11 +232,9 @@ Projet sous licence MIT – libre d’utilisation, modification et diffusion.
 
 ---
 
-## Contact
+## 📧 Contact
 
 Développé par **Fatoumata Ndour**
 Projet d’expérimentation IA pour la Douane sénégalaise
-Email : [fatoumatandour376@gmail.com](fatoumatandour376@gmail.com)
-GitHub : [github.com/fatoumata-ndour](https://github.com/fatoundour)
-
-````
+Email : [fatoumatandour376@gmail.com](mailto:fatoumatandour376@gmail.com)
+GitHub : [github.com/fatoumata-ndour](https://github.com/fatoumata-ndour)

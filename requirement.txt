@@ -35,23 +35,8 @@ psycopg2-binary>=2.9
 sqlalchemy>=2.0
 alembic>=1.13
 
-# Notebooks et environnement interactif
-jupyterlab>=4.1
-notebook>=7.1
-ipykernel>=6.29
-
 # Outils utilitaires
 python-dotenv>=1.0
 joblib>=1.4
 tqdm>=4.66
 requests>=2.32
-
-# Formatage & vérification (optionnel mais recommandé)
-black>=24.4
-flake8>=7.0
-isort>=5.13
-pre-commit>=3.6
-
-# Test et typage
-pytest>=8.1
-mypy>=1.10
