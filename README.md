@@ -24,8 +24,8 @@ Conçu pour s'adapter à **toutes les formes d'import/export**, il permet l'int�
 - Visualisation sur carte
 
 👥 **Utilisateurs :** Douane, PAD, Importateurs, Transitaires  
-🟢 **Accès partiel :** Les utilisateurs tiers n’accèdent qu’à l’information de suivi/ETA.
-  **Outils :** Python, Pandas, Scikit-learn, Folium, Geopandas, Jupyter, FastAPI
+🟢 **Accès partiel :** Les utilisateurs tiers n’accèdent qu’à l’information de suivi/ETA.  
+**Outils :** Python, Pandas, Scikit-learn, Folium, Geopandas, Jupyter, FastAPI
 
 ### 2. 🧾 **Ciblage intelligent des marchandises** (module analytique interne)
 - Analyse croisée des déclarations ORBUS, historiques et factures
@@ -33,8 +33,8 @@ Conçu pour s'adapter à **toutes les formes d'import/export**, il permet l'int�
 - Comparaison des factures (client vs. État)
 
 👥 **Utilisateurs :** Douane uniquement  
-🔐 **Module non exposé publiquement, mais impact visible pour l'importateur.**
-  **Outils :** Python, Scikit-learn, XGBoost, PostgreSQL, API de scoring
+🔐 **Module non exposé publiquement, mais impact visible pour l'importateur.**  
+**Outils :** Python, Scikit-learn, XGBoost, PostgreSQL, API de scoring
 
 ### 3. 🖼️ **Scanner IA – Analyse d’images de conteneurs** (général, adapté aux limites actuelles de l’IA)
 - Détection d’anomalies sur images de scanner
@@ -42,8 +42,8 @@ Conçu pour s'adapter à **toutes les formes d'import/export**, il permet l'int�
 - Aide à la décision pour les agents
 
 👥 **Utilisateurs :** Douane, Transitaires  
-🔔 **Alertes automatiques envoyées au transitaire si anomalie suspectée.**
-  **Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
+🔔 **Alertes automatiques envoyées au transitaire si anomalie suspectée.**  
+**Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
 
 
 ### 4. 🏗️ **Gestion intelligente des entrepôts** (spécifique au Port autonome / PAD)
@@ -51,8 +51,8 @@ Conçu pour s'adapter à **toutes les formes d'import/export**, il permet l'int�
 - Niveau 2 : Suivi des conteneurs sous douane (position, statut de mainlevée)
 
 👥 **Utilisateurs :** PAD, Douane  
-📦 **Module conçu uniquement pour les infrastructures du port.**
-   **Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
+📦 **Module conçu uniquement pour les infrastructures du port.**  
+**Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
 
 
 ---
@@ -97,13 +97,13 @@ Les modules sont hébergés ensemble dans un projet Python propre et versionné.
                                  |
                                  v
                +-------------------------------+
-               |  Module 3 : Ciblage IA        |
+               |  Module 2 : Ciblage IA        |
                |  → Score de risque par conteneur |
                +-------------------------------+
                                  |
                                  v
                +-------------------------------+
-               |  Module 2 : Scanner IA        |
+               |  Module 3 : Scanner IA        |
                |  → Analyse automatique image  |
                |  → Détection de fraude        |
                +-------------------------------+
