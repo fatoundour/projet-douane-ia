@@ -1,49 +1,77 @@
-# 🌟 Projet IA – Système Modulaire pour la Douane Sénégalaise
+# 🚢 Projet IA Douanière – Système de Suivi et Contrôle Intelligent
 
-Ce projet vise à appuyer la transformation digitale de la Douane sénégalaise par l'intégration progressive de modules d’intelligence artificielle.
-Il repose sur une architecture **modulaire et évolutive**, permettant d’ajouter, chaque mois, un module IA indépendant sans perturber le système existant.
-
----
-
-## 🧐 Objectifs
-
-* Optimiser la gestion des flux portuaires
-* Améliorer la précision des contrôles douaniers
-* Réduire les fraudes, les pertes et les congestions
-* Fournir une base IA fiable pour la modernisation progressive de la Douane
+Ce projet propose une **architecture IA modulaire et évolutive** dédiée à la gestion portuaire, aux opérations douanières et à la logistique maritime.  
+Conçu pour s'adapter à **toutes les formes d'import/export**, il permet l'intégration progressive de modules IA **généraux**, tout en tenant compte de **spécificités locales (ex. : Port de Dakar)**.
 
 ---
 
-## 📦 Modules IA du projet
+## 🎯 Objectifs Généraux
 
-### 1. Tracking intelligent des navires
+- Anticiper l'arrivée des navires et gérer les flux logistiques
+- Prioriser les contrôles douaniers selon les risques
+- Optimiser la surveillance des conteneurs (images, mouvements, entreposage)
+- Renforcer la transparence vis-à-vis des transitaires, importateurs et PAD
+- Réduire la fraude par croisement intelligent des données (ex : factures, déclarations)
 
-* Prédiction des dates d’arrivée réelles
-* Suivi en temps réel des itinéraires AIS
-* Détection des itinéraires suspects
-* Visualisation sur carte interactive
+---
+
+## 🧩 Modules IA
+
+### 1. 📍 **Tracking intelligent des navires** (général, adapté au Port de Dakar)
+- Suivi des navires en mer (via AIS)
+- Prédiction automatique de l’ETA (Estimated Time of Arrival)
+- Identification de trajectoires suspectes
+- Visualisation sur carte
+
+👥 **Utilisateurs :** Douane, PAD, Importateurs, Transitaires  
+🟢 **Accès partiel :** Les utilisateurs tiers n’accèdent qu’à l’information de suivi/ETA.
   **Outils :** Python, Pandas, Scikit-learn, Folium, Geopandas, Jupyter, FastAPI
 
-### 2. Analyse automatique des images scanner
+### 2. 🧾 **Ciblage intelligent des marchandises** (module analytique interne)
+- Analyse croisée des déclarations ORBUS, historiques et factures
+- Détection de fausses déclarations, sous-évaluations ou conteneurs fictifs
+- Comparaison des factures (client vs. État)
 
-* Analyse des scans de conteneurs
-* Détection de contrebande, anomalies, objets dissimulés
-* Alerte sur les volumes ou densités suspects
-  **Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
-
-### 3. Ciblage intelligent des marchandises
-
-* Analyse croisée des déclarations, historiques, valeurs
-* Attribution de scores de risque
-* Détection de fausses déclarations, sous-évaluations, conteneurs fictifs
+👥 **Utilisateurs :** Douane uniquement  
+🔐 **Module non exposé publiquement, mais impact visible pour l'importateur.**
   **Outils :** Python, Scikit-learn, XGBoost, PostgreSQL, API de scoring
 
-### 4. Gestion intelligente des entrepôts
+### 3. 🖼️ **Scanner IA – Analyse d’images de conteneurs** (général, adapté aux limites actuelles de l’IA)
+- Détection d’anomalies sur images de scanner
+- Lecture automatisée de formes, densités suspectes
+- Aide à la décision pour les agents
 
-* Suivi des conteneurs après débarquement
-* Détection des mouvements non autorisés, vols, erreurs
-* Optimisation de l’occupation et de la traçabilité
-  **Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
+👥 **Utilisateurs :** Douane, Transitaires  
+🔔 **Alertes automatiques envoyées au transitaire si anomalie suspectée.**
+  **Outils :** Python, OpenCV, TensorFlow/Keras, FastAPI, CNN personnalisé
+
+
+### 4. 🏗️ **Gestion intelligente des entrepôts** (spécifique au Port autonome / PAD)
+- Niveau 1 : Suivi des entrepôts (occupation, type de marchandise, sorties/entrées à venir, disponibilité)
+- Niveau 2 : Suivi des conteneurs sous douane (position, statut de mainlevée)
+
+👥 **Utilisateurs :** PAD, Douane  
+📦 **Module conçu uniquement pour les infrastructures du port.**
+   **Outils :** Python, capteurs simulés, Map interactive, PostgreSQL
+
+
+---
+
+## 🧠 Fonctionnement général
+
+Chaque module fonctionne comme un **microservice indépendant**, avec une communication centralisée via une **API FastAPI** et un tableau de bord dédié par utilisateur.  
+Les modules sont hébergés ensemble dans un projet Python propre et versionné.
+
+---
+
+## 🔐 Accès différencié par utilisateur
+
+| Module                  | Douane | Importateur/Transitaire | PAD |
+|------------------------|--------|--------------------------|-----|
+| Tracking Navires       | ✅      | ✅ (suivi ETA uniquement) | ✅   |
+| Ciblage IA             | ✅      | ❌ (impact indirect)      | ❌   |
+| Scanner IA             | ✅      | ✅ (alertes uniquement)   | ❌   |
+| Gestion Entrepôts PAD  | ✅      | ❌                        | ✅   |
 
 ---
 
@@ -237,4 +265,4 @@ Projet sous licence MIT – libre d’utilisation, modification et diffusion.
 Développé par **Fatoumata Ndour**
 Projet d’expérimentation IA pour la Douane sénégalaise
 Email : [fatoumatandour376@gmail.com](mailto:fatoumatandour376@gmail.com)
-GitHub : [github.com/fatoumata-ndour](https://github.com/fatoumata-ndour)
+GitHub : [github.com/fatoumata-ndour](https://github.com/fatoundour)
