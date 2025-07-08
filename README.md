@@ -265,4 +265,4 @@ Projet sous licence MIT – libre d’utilisation, modification et diffusion.
 Développé par **Fatoumata Ndour**
 Projet d’expérimentation IA pour la Douane sénégalaise
 Email : [fatoumatandour376@gmail.com](mailto:fatoumatandour376@gmail.com)
-GitHub : [github.com/fatoumata-ndour](https://github.com/fatoundour)
+GitHub : [github.com/fatoundour](https://github.com/fatoundour)
